@@ -6,7 +6,6 @@ import { climateApi } from "./climateApi";
 import type { ClimateApi } from "./climateApi";
 
 const useMock = import.meta.env.VITE_USE_MOCK === "true";
-// const useMock = import.meta.env.VITE_USE_MOCK === "false";
 
 export const api: ClimateApi = useMock
   ? (await import("./mockController")).mockController
